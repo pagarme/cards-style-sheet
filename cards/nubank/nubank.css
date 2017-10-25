@@ -1,0 +1,6 @@
+.nubank {
+  --background: #892a92;
+  --background2: #70217a;
+  --widthLogo: 130px;
+  background: linear-gradient(90deg, var(--background), var(--background2));
+}

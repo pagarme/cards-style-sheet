@@ -1,0 +1,81 @@
+.neon {
+    --background: #30cebb;
+    --background2: #009acb;
+    --wave: #00cbe3;
+    --wave2: #00a8bf;
+    --widthLogo: 180px;
+    background: radial-gradient(circle at 60% 25%, var(--background), var(--background2))
+}
+
+.neon::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.25;
+    background: repeating-radial-gradient(circle at 54.4% 20%, var(--wave2), var(--wave2) 2px, var(--wave) 2px, var(--wave) 5px);
+    z-index: -1;
+}
+
+.neon .card__figure--logo {
+    width: var(--widthLogo);
+    position: absolute;
+    right: 65%;
+    transform: translate(calc(var(--widthLogo) / 2), 20px);
+}
+
+.neon .card__figure::after{
+    display: none;
+}
+
+.neon .card__reader {
+    background: radial-gradient(#e0d4c8, #7e7b78);
+}
+
+.neon .card__flag {
+    display: none;
+}
+
+.neon .card__number {
+    color: var(--white);
+    line-height: 30px;
+    text-align: right;
+    width: 55px;
+    z-index: 1;
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    text-shadow: 1px 1px 1px var(--wave2);
+    text-decoration: underline;
+}
+
+.neon .card__dates {
+    position: absolute;
+    width: 40%;
+    font-size: .9em;
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    font-family: var(--font);
+    bottom: 20px;
+    right: -15px;
+    transform: translate(60px, 0px);
+}
+
+.neon .card__dates .card__dates--expiration{
+    left: 0;
+}
+
+.neon .card__name {
+    font-family: var(--font);
+    font-size: .9em;
+    font-weight: normal;
+    color: var(--white);
+    letter-spacing: 2.5px;
+    transform: translate(35px, 25px);
+    position: absolute;
+    bottom: 28px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+}
