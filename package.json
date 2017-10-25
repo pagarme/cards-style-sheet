@@ -1,0 +1,22 @@
+{
+  "name": "cards-style-sheet",
+  "version": "1.0.0",
+  "description": "<p align=\"center\"> \t<img src=\"card-flip.gif\" width=\"300\"> </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pagarme/cards-style-sheet.git"
+  },
+  "author": "Pagarme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pagarme/cards-style-sheet/issues"
+  },
+  "homepage": "https://github.com/pagarme/cards-style-sheet#readme",
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  }
+}
