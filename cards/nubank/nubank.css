@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
-@import url('https://fonts.googleapis.com/css?family=Overpass+Mono');
-
-
-:root {
+.nubank {
   --purple: #892a92;
   --purple2: #70217a;
   --white: #f6d3fd;
@@ -12,16 +8,7 @@
   --masterFont: "Raleway", sans-serif;
 }
 
-body {
-  --baseColor: #c2e59c;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  background: var(--baseColor);
-  background: linear-gradient(to right, #64b3f4, var(--baseColor));
-}
-
-.card {
+.nubank {
   --heightCalc: - calc((var(--height) / 2) - 10px);
   --widthCalc: calc(var(--width) / 2);
   height: var(--height);
@@ -36,13 +23,13 @@ body {
   transform: translateY(calc(50% - 10px));
 }
 
-.card__figure {
+.nubank .card__figure {
   position: relative;
   height: 40px;
   margin: 0;
 }
 
-.card__figure::after {
+.nubank .card__figure::after {
   content: "PLATINUM";
   font-size: 0.45em;
   letter-spacing: 4px;
@@ -53,7 +40,7 @@ body {
   bottom: calc(-100% - 15px);
 }
 
-.card__figure--logo {
+.nubank .card__figure--logo {
   --widthLogo: 130px;
   width: var(--widthLogo);
   position: absolute;
@@ -61,7 +48,7 @@ body {
   transform: translate(calc(var(--widthLogo) / 2), 20px);
 }
 
-.card__reader {
+.nubank .card__reader {
   width: 50px;
   height: 40px;
   background: radial-gradient(#d9a56c, #b18457);
@@ -72,7 +59,7 @@ body {
   overflow: hidden;
 }
 
-.card__reader--risk {
+.nubank .card__reader--risk {
   width: 50px;
   height: 40px;
   border-radius: 13px;
@@ -82,23 +69,23 @@ body {
   z-index: 0;
 }
 
-.card__reader--risk-one {
+.nubank .card__reader--risk-one {
   transform: translate(37px, 15px);
 }
 
-.card__reader--risk-two {
+.nubank .card__reader--risk-two {
   transform: translate(15px, 30px);
 }
 
-.card__reader--risk-three {
+.nubank .card__reader--risk-three {
   transform: translate(-37px, -15px);
 }
 
-.card__reader--risk-four {
+.nubank .card__reader--risk-four {
   transform: translate(-15px, -30px);
 }
 
-.card__number {
+.nubank .card__number {
   font-family: var(--font);
   font-size: 1.15em;
   font-weight: normal;
@@ -112,8 +99,8 @@ body {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
 }
 
-.card__number::before,
-.card__number::after {
+.nubank .card__number::before,
+.nubank .card__number::after {
   font-family: Arial;
   color: rgba(0, 0, 0, 0.4);
   font-size: 0.4em;
@@ -121,13 +108,13 @@ body {
   letter-spacing: 0px;
 }
 
-.card__number::after {
+.nubank .card__number::after {
   content: "Valid thru";
   width: 80px;
   transform: translate(-285px, 28px);
 }
 
-.card__dates {
+.nubank .card__dates {
   position: absolute;
   width: 40%;
   font-size: .9em;
@@ -139,16 +126,16 @@ body {
   transform: translate(60px, 0px);
 }
 
-.card__dates .card__dates--expiration{
+.nubank .card__dates .card__dates--expiration{
     position: relative;
     left: -25px;
 }
 
-.card__dates span {
+.nubank .card__dates span {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
 }
 
-.card__name {
+.nubank .card__name {
   font-family: var(--font);
   font-size: .9em;
   font-weight: normal;
@@ -160,7 +147,7 @@ body {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
 }
 
-.card__flag {
+.nubank .card__flag {
   right: 30px;
   top: 45%;
   border-radius: 25px;
@@ -171,7 +158,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.card__flag--globe {
+.nubank .card__flag--globe {
   --margin: 5px;
   width: calc(100% - (var(--margin) * 2));
   background-color: #b7b2b8;
@@ -187,8 +174,8 @@ body {
   );
 }
 
-.card__flag--globe::after,
-.card__flag--globe::before {
+.nubank .card__flag--globe::after,
+.nubank .card__flag--globe::before {
   content: "\f0ac";
   font-family: FontAwesome;
   color: rgba(0, 0, 0, 0.2);
@@ -198,15 +185,15 @@ body {
   position: absolute;
 }
 
-.card__flag--globe::after {
+.nubank .card__flag--globe::after {
   transform: translateX(10px);
 }
 
-.card__flag--globe::before {
+.nubank .card__flag--globe::before {
   transform: translateX(25px);
 }
 
-.card__flag--red {
+.nubank .card__flag--red {
   position: absolute;
   left: 5px;
   width: 40px;
@@ -215,7 +202,7 @@ body {
   background-color: #ce0e1d;
 }
 
-.card__flag--yellow {
+.nubank .card__flag--yellow {
   position: absolute;
   right: 5px;
   width: 40px;
@@ -224,7 +211,7 @@ body {
   background-color: #e39833;
 }
 
-.card__flag--yellow::after {
+.nubank .card__flag--yellow::after {
   content: "MasterCard";
   position: absolute;
   font-size: 0.7em;
@@ -237,7 +224,7 @@ body {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
 }
 
-.assign {
+.nubank .assign {
   text-align: center;
   margin-top: 113px;
   font-family: var(--masterFont);
@@ -246,12 +233,12 @@ body {
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
 }
 
-.assign a {
+.nubank .assign a {
   text-decoration: none;
   font-weight: 700;
   color: #FFF;
 }
 
-.assign a::hover {
+.nubank .assign a::hover {
   color: var(--purple);
 }

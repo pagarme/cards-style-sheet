@@ -1,0 +1,8 @@
+body {
+    --baseColor: #c2e59c;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: var(--baseColor);
+    background: linear-gradient(to right, #64b3f4, var(--baseColor));
+  }
