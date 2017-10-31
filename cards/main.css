@@ -1,8 +1,10 @@
-body {
-    --baseColor: #c2e59c;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    background: var(--baseColor);
-    background: linear-gradient(to right, #64b3f4, var(--baseColor));
-  }
+/* GLOBAL */
+@import '__variables.css';
+
+/* ISSUERS */
+@import 'nubank/nubank.css';
+@import 'neon/neon.css';
+
+/* FINAL CARD */
+@import '__card-example.css';
+@import '__card.css';

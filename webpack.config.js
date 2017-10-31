@@ -1,40 +1,34 @@
 const webpack = require('webpack');
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const extractCSS = new ExtractTextPlugin('cardstylesheet.min.css')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    'cardstylesheet.min.css': [
-      __dirname + '/cards/__variables.css',
-      __dirname + '/cards/main.css',
-      __dirname + '/cards/nubank/nubank.css'
-    ]
+    'cardstylesheet.min.css': path.join(__dirname, '/cards/main.css'),
   },
   devtool: '',
   output: {
-    path: __dirname + '/dist/',
-    filename: '[name]'
-
+    path: path.join(__dirname, '/dist/'),
+    filename: 'cardstylesheet.min.css'
+  },
+  devServer: {
+    contentBase: path.join(__dirname, '/dist/'),
+    hot: true
   },
   module: {
     rules: [{
         test: /\.css$/i,
-        use: extractCSS.extract({
-          use: {
-            loader: 'css-loader',
-            options: {
-              minimize: true
-            }
-          }
-        })
+        use: ['style-loader', 'css-loader']
     }]
   },
   resolve: {
-    alias: {},
-    modules: [],
-    extensions: ['.css']
+    extensions: ['.css', '.js']
   },
   plugins: [
-    extractCSS
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    })
   ]
 };

@@ -1,0 +1,23 @@
+body {
+    --baseColor: #c2e59c;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: var(--baseColor);
+    background: linear-gradient(to right, #64b3f4, var(--baseColor));
+}
+
+.card-list {
+    max-width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-basis: 0 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assing a {
+    color: --background;
+}
